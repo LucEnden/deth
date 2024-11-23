@@ -34,3 +34,7 @@
 
 5. Setup LCD layout as described bellow:
 ![horizontal_layout](horizontal_layout.png)
+
+### About Save State 1
+
+This save state is intended to be used as a fresh start. It's a state in which the intro sequence (the introduction menu where prof. Rowan asks you a bunch of stuff + namign yourself and the rival). DO NOT TOUCH THIS STATE!
