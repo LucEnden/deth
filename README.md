@@ -23,18 +23,23 @@
 1. First off, before booting platinum, lower the volume by going to `Config > Sound > volume slider` (5 is more then acceptable, 100 is deafening)
 2. Setup fastforwarding as described bellow:
 
-![fast_forward_config](fast_forward_config.png)
-![fast_forward_mute_config](fast_forward_mute_config.png)
+> ![fast_forward_config](fast_forward_config.png)
+> ![fast_forward_mute_config](fast_forward_mute_config.png)
 
 3. Setup frameskip as described bellow:
-![frame_skip_config](frame_skip_config.png)
+
+> ![frame_skip_config](frame_skip_config.png)
 
 4. Setup emulation controls as described bellow:
-![emu_controls](emu_controls.png)
+
+> ![emu_controls](emu_controls.png)
 
 5. Setup LCD layout as described bellow:
-![horizontal_layout](horizontal_layout.png)
 
-### About Save State 1
+> ![horizontal_layout](horizontal_layout.png)
 
-This save state is intended to be used as a fresh start. It's a state in which the intro sequence (the introduction menu where prof. Rowan asks you a bunch of stuff + namign yourself and the rival). DO NOT TOUCH THIS STATE!
+### About save states 
+
+- **Save state 1:** a state in which the intro sequence (the introduction menu where prof. Rowan asks you a bunch of stuff + naming yourself and the rival) has been played trough, meaning it starts in the bedroom (before talking to the rival). The save state is intented for restarting a run. DO NOT OVERWRITE THIS STATE!
+- **Save state 9:** a state in which the game is 100% completed save state with a party full of level 100 Pokemons (including one's for HM purposes), all items, all gyms etc. for manual testing. DO NOT OVERWRITE THIS STATE!
+- **All other states**: reserved for eventually running the code on the game.
