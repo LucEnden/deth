@@ -1,11 +1,11 @@
 ## Getting started
 
-1. Download the DeSmuME exe first and run it
-2. Try to open a ROM, this creates a ROM folder
+1. Download the DeSmuME exe first and run it (see downloads section)
+2. Try to open a ROM, this creates the ROM folder
 3. Follow the Setup guide bellow
 4. Close DeSmuME
-5. Download the ROM
-6. Place the ROM in the ROM folder created by DeSmuME
+5. Download the Pokemon Platinum ROM (see downloads section)
+6. Place the Platinum ROM in the ROM folder created by DeSmuME
 7. Open DeSmuME and load the ROM
 
 ### Downloads
@@ -41,5 +41,5 @@
 ### About save states 
 
 - **Save state 1:** a state in which the intro sequence (the introduction menu where prof. Rowan asks you a bunch of stuff + naming yourself and the rival) has been played trough, meaning it starts in the bedroom (before talking to the rival). The save state is intented for restarting a run. DO NOT OVERWRITE THIS STATE!
-- **Save state 9:** a state in which the game is 100% completed save state with a party full of level 100 Pokemons (including one's for HM purposes), all items, all gyms etc. for manual testing. DO NOT OVERWRITE THIS STATE!
+- **Save state 9:** a state in which the game is 100% completed. It has a party full of level 100 Pokemons (including one's for HM purposes), all items, all gyms etc. for manual testing. DO NOT OVERWRITE THIS STATE!
 - **All other states**: reserved for eventually running the code on the game.
