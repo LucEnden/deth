@@ -1,7 +1,5 @@
 In this mini project you are going to demonstrate your understanding of Decision Theory by:
-- Calculating Optimal Actions using Utility Theory
-and
-- Calculating an Optimal Policy for a Markovian Decision process
+- (Calculating Optimal Actions using Utility Theory OR Calculating an Optimal Policy for a Markovian Decision process) AND (one of the RL strategies covered in chapter 23 of [AIMA]).
 
 Requirements:
 - You program a Stochastic Environment with a non-trivial task in a Jupyter Notebook.
@@ -17,3 +15,8 @@ Process:
 - You are encouraged to submit intermediate versions to get early feedback from your teacher.
 - Two mandatory submit points have been defined.
 - This is a duo assignment (if you go solo, please also register in a project group 'deth project duo').
+
+---
+Some extra Requirements, the project should contain one of both:
+- model based solution
+- model free solution
