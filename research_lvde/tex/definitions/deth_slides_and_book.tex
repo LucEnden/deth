@@ -1,0 +1,15 @@
+\section{Markovian Decision Processes}
+
+Intuativly, a markovian decision process is a sequential decision-making problem for a fully observable, stochastic environment with a Markovian transition model and additive rewards. As defined in \textit{Russell S. Artificial Intelligence: A Modern Approach}, 4th ed., 2022.
+\newline
+A more formal defition is given below:
+\begin{quote}
+A \textbf{Markov decision process} is a 4-tuple $(S, A, P_a, R_a)$, where:
+\begin{itemize}
+    \item $(S)$ is a set of states called the \textbf{state space}. The state space may be discrete or continuous, like the set of real numbers.
+    \item $(A)$ is a set of actions called the \textbf{action space} (alternatively, $A_s$ is the set of actions available from state $s$). As for the state, this set may be discrete or continuous.
+    \item $P_a(s, s')$ is, on an intuitive level, the \textbf{probability} that action $a$ in state $s$ at time $t$ will lead to state $s'$ at time $t+1$.
+    \item A policy function $\pi$ is a (potentially probabilistic) mapping from state space $(S)$ to action space $(A)$.
+\end{itemize}
+\end{quote}
+

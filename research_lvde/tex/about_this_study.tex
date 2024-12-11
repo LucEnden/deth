@@ -1,0 +1,27 @@
+\chapter{About this Study}
+
+\section{Inspiration for this Study}
+
+This study was undertaken as part of my decision theory course. Upon learning that the course would require a combination of applied and theoretical research within the context of decision theory, I was immediately drawn to the idea of creating a Markov decision process capable of playing *Pokémon Platinum*.
+
+The inspiration for this idea came from a video by Keeyan Ghoreshi \href{https://www.youtube.com/watch?v=jNMWkD5VsZ8}{video by Keeyan Ghoreshi}, in which the creator analyzes how the game generates random numbers to predict every possible outcome among the 4,294,967,296 potential ways the game could unfold. By doing so, Ghoreshi identifies a deterministic sequence of inputs that will always beat the game. This approach, however, relies heavily on an in-depth understanding of the game's internal mechanics.
+
+In contrast, my approach will differ significantly by focusing on building a Markov decision process that does not require extensive reverse engineering of the game’s random number generation. Instead, it will aim to make decisions based on probabilistic modeling of state transitions and outcomes.
+
+\section{A More Probabilistic Approach}
+
+For each segment of the game, a probabilistic method will be employed to attempt to progress through it successfully. In the inspiration video, a combination of statistics and basic probability is used to identify outliers, such as the longest possible duration of a battle or the maximum number of encounters in a specific grass patch.
+
+My approach will lean more toward reinforcement learning principles, primarily utilizing \gls{markovian decision processes} (or \gls{mdp}). I find MDPs particularly compelling and plan to use them extensively to model and solve decision-making problems within the game. However, my methodology will remain flexible—if I encounter alternative approaches during the course of my research that appear promising, I will consider and potentially incorporate them into my analysis.
+
+\section{On Model Generalization}
+
+Each model designed troughout this study will be made to be as general-purpose as possible. For instance, a single model will handle overworld exploration rather than creating separate models for specific areas or tasks. This approach is intended to maximize efficiency and general applicability within the game's framework. 
+
+However, if creating a broadly generalized model for broader task completion proves impractical within the given timeframe, I will adopt a "divide and conquer" strategy. In this case, larger problems will be divided into smaller, more manageable subproblems, each addressed by its own specialized model. This fallback approach ensures progress remains achievable while maintaining focus on the overall objective.
+
+\section{Experimental Approach to Modelling}
+
+This study will rely on a series of experiments to develop, refine, and evaluate the proposed probabilistic model for playing Pokémon Platinum. Each experiment will focus on a specific aspect of the model, such as reinforcement learning strategies, Markovian decision process implementation, or efficiency in simulation and decision-making.
+
+A concise summary of the experiments, their methodologies, and key results will be included in this document to provide an overview of the study's findings. To maintain transparency and allow for deeper analysis, the full details of each experiment—including experimental design, data, and outcomes—will remain accessible as appendices or external supplementary material. This ensures that interested readers can explore the methods and results in greater depth if desired.

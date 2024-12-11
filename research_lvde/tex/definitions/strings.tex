@@ -1,0 +1,32 @@
+\section{Strings}
+
+\begin{quote}
+A string is a sequence of characters.
+
+Formally, a string can be defined as a finite sequence of elements from a finite set called the \emph{alphabet}. Using list comprehension, we can write:
+\[
+s = [c_i \mid c_i \in \Sigma, 1 \leq i \leq n]
+\]
+where $\Sigma$ is the alphabet, $n$ is the length of the string, and $c_i$ are the characters in the string.
+
+Logical equivalence ($\equiv$) for strings means that two strings $s_1$ and $s_2$ are considered equivalent if and only if:
+\[
+s_1 \equiv s_2 \iff \forall i \; (s_1[i] = s_2[i] \text{ and } |s_1| = |s_2|)
+\]
+
+A string is considered $empty(s) \iff |s| = 0$, also denoteable with $\lambda$.
+
+\emph{labelencode} is a function on any set of strings $s$, such that:
+\begin{itemize}
+    \item $\text{labelencode}(s) \implies \{ x_1, x_2, \ldots, x_n \}$
+    \item $n = |s|$, where $|s|$ is the number of elements (length) in $s$
+    \item $\forall i : x_i \in \mathbb{N}$
+\end{itemize}
+\end{quote}
+
+\subsection{Function on Tuple with String Elements to Ordered Set}
+
+There exists a function $f(x)$ where $x$ is a tuple, which results in an ordered set of strings $y$ such that:
+\begin{itemize}
+    \item $|y| = |\{ i : x_i \equiv \text{string} \}|$
+\end{itemize}

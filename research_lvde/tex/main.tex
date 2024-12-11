@@ -1,29 +1,52 @@
-\documentclass{article}
-\usepackage{makeidx}
-\makeindex
+\documentclass{report}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\input{glossary.tex}
 
 \begin{document}
 
 % Title Page
-\title{Your Title Here}
-\author{Your Name Here}
-\date{\today}
-\maketitle
+\input{title_page.tex}
+
+% Special Thanks
+\newpage
+\input{special_thanks.tex}
 
 % Abstract
-\begin{abstract}
-Your abstract goes here. This is a brief summary of your document.
-\end{abstract}
+\newpage
+\input{abstract.tex}
 
 % Table of Contents
+\newpage
 \tableofcontents
 
 % Main Content
-\section{Introduction}
-Your introduction goes here.
+% ...
 
-% Index
 \newpage
-\printindex
+\input{about_this_study.tex}
+
+\newpage
+\input{study_goal.tex}
+
+\newpage
+\input{source_collection.tex}
+
+\newpage
+\input{domain_understanding.tex}
+
+\newpage
+\input{definitions.tex}
+
+\newpage
+\input{research_questions.tex}
+
+\newpage
+\printglossary
 
 \end{document}
