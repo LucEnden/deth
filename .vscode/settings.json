@@ -7,5 +7,6 @@
                 "pdflatex"
             ]
         }
-    ]
+    ],
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/research_lvde/tex/out/"
 }
