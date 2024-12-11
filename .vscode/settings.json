@@ -5,6 +5,20 @@
             "name": "pdflatex",
             "tools": [
                 "pdflatex"
+            ],
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-aux-directory=out",
+                "-output-directory=out",
+                "%DOC%"
             ]
         }
     ],
