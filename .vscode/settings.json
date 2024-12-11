@@ -18,7 +18,7 @@
                 "-file-line-error",
                 "-aux-directory=out",
                 "-output-directory=out",
-                "%DOC%"
+                "%WORKSPACE_FOLDER%/research_lvde/tex/main.tex"
             ]
         }
     ],
