@@ -1,13 +1,15 @@
 \documentclass{report}
 \usepackage{amsfonts}
 \usepackage{graphicx}
-% \usepackage[hidelinks]{hyperref}
+% \usepackage[hidelinks]{hyperref} % Uncomment this line to hide hyperlinks formatting
 \usepackage{hyperref}
 \usepackage{glossaries}
+\usepackage{biblatex}
 
 \makeglossaries
-
 \input{glossary.tex}
+
+\addbibresource{references.bib}
 
 \begin{document}
 
@@ -48,6 +50,9 @@
 \input{research_questions.tex}
 
 \newpage
-\printglossary
+\printglossaries
+
+\newpage
+\printbibliography 
 
 \end{document}

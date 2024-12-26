@@ -1,10 +1,59 @@
+\newglossaryentry{agent}
+{
+    name={Agent},
+    description={An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment to reach a certain goal. \cite{rn2022aima}, page 82}
+}
+
+\newglossaryentry{reinforcement learning}
+{
+    name={Reinforcement Learning},
+    description={
+        The subfield of Artificial Intelegence, in which agents are trained to maximizing the expected sum of rewards from its reward function. \cite{rn2022aima}, page 840
+    }
+}
+
+\newacronym{rl}{RL}{Reinforcement Learning}
+
+\newglossaryentry{transition model}
+{
+    name={Transition model},
+    description={
+        An agents knowledge about how the world it lives in works is called a transition model. 
+    },
+}
+
 \newglossaryentry{markovian decision processes}
 {
     name={Markovian decision process},
-    description={A sequential decision-making problem for a fully observable, stochastic environment 
-    with a Markovian transition model and additive rewards. As defined in \textit{Russell S. Artificial Intelligence: A Modern Approach}, 4th ed., 2022},
+    description={
+        A sequential decision-making problem for a fully observable, stochastic environment with a Markovian transition model and additive rewards. 
+    },
 }
 
 \newacronym{mdp}{MDP}{Markovian Decision Processes}
 
-\newacronym{rl}{RL}{Reinforcement Learning}
+\newglossaryentry{policy}
+{
+    name={policy},
+    description={
+        A policy is a mapping from states to actions, traditionally denoted by $\pi$ where $\pi(s)$ results in the action recommended by the current policy. \cite{rn2022aima}, page 554.
+    },
+}
+
+\newacronym{swot}{SWOT}{Strengths, Weaknesses, Opportunities, Threats}
+
+\newglossaryentry{reward function}
+{
+    name={Reward function},
+    description={
+        The reward function $R(s, a, s')$ gives a reward to the agent for taking action $a$ in state $s$ and transitioning to state $s'$. \cite{rn2022aima}, page 553.
+    },
+}
+
+\newglossaryentry{action-cost function}
+{
+    name={Action-cost function},
+    description={
+        The action-cost function $c(s, a, s')$ assigns a cost to taking action $a$ in state $s$ to reach state $s'$. \cite{rn2022aima}, page 83.
+    },
+}

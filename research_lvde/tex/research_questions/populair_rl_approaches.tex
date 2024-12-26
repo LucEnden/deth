@@ -1,8 +1,71 @@
 \section{What are popular (both old and new) reinforcement learning approaches?  }
-\dots
+
+In this chapter we will discuss popular reinforcement learning approaches. 
+First we will discuss the different aspacts that can be used to categorize reinforcement learning approaches. 
+Then we will go into concrete examples of popular reinforcement learning approaches.
+After that we will compare these approaches in terms of their strengths and weaknesses usign a \gls{swot} analysis.
+Finally, we will discuss if there are supporting methods that could enhance the effectiveness of reinforcement learning.
+
+\subsection{Exploration vs Exploitation}
+
+In reinforcement learning, the \gls{agent} must balance \emph{exploration} and \emph{exploitation} to maximize its cumulative rewards. \emph{Exploration} involves trying new actions to discover their effects on the environment and learn more about the optimal \gls{policy}. \emph{Exploitation}, on the other hand, involves selecting actions that are known to yield high rewards based on the \gls{agent}'s current knowledge. The \gls{agent} must strike a balance between these two strategies to effectively learn and optimize its behavior over time.
+
+\subsection{Value-based vs Policy-based approaches}
+
+\emph{Value-based} approaches focus on learning a \emph{value function}, which estimates the expected cumulative reward of being in a particular state (or state-action pair). The \gls{agent} derives its \gls{policy} indirectly from this value function by selecting actions that lead to states with the highest estimated values. For example, methods like Q-learning aim to iteratively update the value function to converge on the optimal \gls{policy}.
+
+\emph{Policy-based} approaches, in contrast, directly optimize the without explicitly estimating a value function. The \gls{agent} learns a parameterized \gls{policy} that maps states to actions, often using methods like gradient ascent to maximize expected rewards. This approach is particularly well-suited for environments with high-dimensional or continuous action spaces where deriving a \gls{policy} from a value function may be challenging.
+
+\subsection{On-\gls{policy} vs Off-\gls{policy} approaches}
+
+\emph{On-\gls{policy}} approaches learn a \gls{policy} while interacting with the environment using the same \gls{policy} that is being evaluated and improved. This means the \gls{agent} uses its current \gls{policy} to generate actions and then updates that \gls{policy} based on the resulting feedback. 
+
+\emph{Off-\gls{policy}} approaches, on the other hand, learn a \gls{policy} while following a different \gls{policy} to generate actions. This allows the \gls{agent} to explore the environment using one \gls{policy} (the behavior \gls{policy}) while improving another \gls{policy} (the target \gls{policy}).
+
+\subsection{Model-based vs Model-free approaches}
+
+\emph{Model-based} approaches rely on a \gls{transition model} of the environment. This model describes how actions taken by the \gls{agent} lead to different states and rewards. If the model is unknown, the \gls{agent} can learn it by observing the effects of its actions. With this model, the \gls{agent} can plan its behavior by simulating potential outcomes and selecting actions that optimize future rewards.
+
+\emph{Model-free} approaches, on the other hand, bypass the need for a \gls{transition model} entirely. Instead of explicitly learning how the environment transitions between states, the \gls{agent} focuses on directly learning the optimal \gls{policy} or value function that maps states to actions based on observed rewards. This eliminates the need to model the environment but requires a more direct trial-and-error approach to improve behavior.
+
+\subsection{Action-Cost function and Reward Function}
+
+\emph{\gls{action-cost function}} is a function $c(s, a, s')$ that assigns a cost to taking action $a$ in state $s$ to eventually reach state $s'$.
+\emph{\gls{reward function}s} $R(s, a, s')$ give a reward to the \gls{agent} for taking action $a$ in state $s$ and transitioning to state $s'$. The goal of the \gls{agent} is to maximize the expected sum of rewards over time by selecting actions that minimize costs and maximize rewards.
+
+\subsection{To summarize}
+
+Before we start the comparative analysis of popular reinforcement learning approaches, let's summarize the above.
+
+Summery of the subsections:
+\begin{itemize}
+    \item exploration involves trying new actions to learn more about the environment, while exploitation involves selecting actions that are known to yield high rewards.
+    \item value-based methods aim to determine optimal actions by learning value functions, while \gls{policy}-based methods focus on learning the optimal \gls{policy} directly.
+    \item on-\gls{policy} methods evaluate and improve the \gls{policy} being used, while off-\gls{policy} methods evaluate one \gls{policy} while potentially following another. See: \cite{rn2022aima}, page 853-854.
+    \item if an approach uses a model of the environment to plan its actions, it is model-based. If it does not use a model, it is model-free. See: \cite{rn2022aima}, page 841.
+    \item the \gls{reward function} $R(s, a, s')$ gives a reward to the \gls{agent} for taking action $a$ in state $s$ and transitioning to state $s'$. The \gls{action-cost function} $c(s, a, s')$ assigns a cost to taking action $a$ in state $s$ to reach state $s'$. See: \cite{rn2022aima}, pages 553 and 83 respectively.
+\end{itemize}
+
+In reinforcement learning, an agent interacts with an environment to learn how to behave optimally.
+An agent performs actions conform to a \gls{policy} $pi$ to maximize the expected sum of rewards. 
+The \gls{policy} dictates which action to take in a given state $s$, with the end goal of reaching some desired state $s'$.
+What each action does is described by the \gls{transition model}.
+An action cost function $c(s, a, s')$ assigns a cost to taking an action and if that action results in reaching $s'$, a \gls{reward function} $R(s, a, s')$ assigns a reward to taking an action and reaching $s'$.
+
+\subsection{Comparitive Analysis on Popular Reinforcement Learning Approaches}
+
+TODO: give a short description of each approach of the following approaches:
+- Q-learning (\cite{rn2022aima}, page 841)
+- SARSA (\cite{rn2022aima}, page 853)
+- Deep Q-Network (\cite{rn2022aima}, page 867)
+- Proximal Policy Optimization (\cite{rn2022aima}, page 872)
+- Deep Deterministic Policy Gradient
+- Trust Region Policy Optimization
+- Soft Actor-Critic
 
 \subsection{How do these approaches compare in terms of their strengths and weaknesses?  }
-\dots
+
+TODO: add a table with the SWOT analysis.
 
 \subsection{Are there supporting methods, such as statistical techniques or others, that could enhance the effectiveness of reinforcement learning?}
 \dots

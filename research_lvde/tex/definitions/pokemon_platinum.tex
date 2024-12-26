@@ -83,17 +83,24 @@ TODO: define pokemon natures mathimatically
 
 \subsection{Pokémon}
 
-A \emph{Pokémon} $p \in \mathbb{P}$ is a 14-tuple $(hp, atk, def, \text{spatk}, \text{spdef}, \text{spd}, \text{ability}, \text{nature}, t_1, t_2, m_1, m_2, m_3, m_4, \text{status})$, where:
+A \emph{Pokémon} $p \in \mathbb{P}$ is a ...-tuple $( 
+    \text{base hp}, \text{base atk}, \text{base def}, \text{base spatk}, \text{base spdef}, \text{base spd}, \break
+    \text{hp iv}, \text{atk iv}, \text{def iv}, \text{spatk iv}, \text{spdef iv}, \text{spd iv}, 
+    \text{hp ev}, \text{atk ev}, \text{def ev}, \text{spatk ev}, \text{spdef ev}, \text{spd ev}, \break
+    \text{level}, \text{ability}, \text{nature}, t_1, t_2, m_1, m_2, m_3, m_4, \text{status}
+    )$, where:
 \begin{itemize}
     \item $\mathbb{P}$ is the set of all Pokémon available in Pokémon Platinum. It is constant and known beforehand. A list of Pokémon can be found at [TODO: add link to the Pokémon Platinum Dex](lin).
     \item $hp, \text{atk}, \text{def}, \text{spatk}, \text{spdef}, \text{spd} \in \mathbb{N}$ are the Pokémon's stats, those being: hit points, physical attack power, physical defensive power, special attack power, special defensive power, and speed, respectively.
     \begin{itemize}
         \item TODO: Describe that stats are all functions, such that:
             \begin{itemize}
-                \item $hp(p) = TODO: add HP formula here$
-                \item All other stats $f(p) = TODO: add other stat formula here$
+                \item $hp(p) = \left[ \frac{2 \times \text{base} + \text{iv} + (\frac{\text{ev}}{4}) \times \text{level}}{100} \right] + level + 10$
+                \item All other stats $f(p) = \left[ \left( \left[ \frac{2 \times \text{base } + \text{ iv} + (\frac{\text{ ev}}{4}) \times \text{level}}{100} \right] + 5 \right) \times \text{nature} \right]$
             \end{itemize}
     \end{itemize}
+    \item $iv \in \mathbb{N}$ is the Pokémon's individual value.
+    \item $ev \in \mathbb{N}$ is the Pokémon's effort value, which are bonus stats that can be gained through battling.
     \item ability $x \in \mathbb{A}$.
     \item $t_1, t_2 \in T$ are the Pokémon's types.
     \begin{itemize}
