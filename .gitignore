@@ -4,3 +4,4 @@ emulation/DeSmuME_X432R_x64.ini
 tools/bak/*
 research_lvde/tex/out/*
 research_lvde/experiments/initial_pokemon_battleing_agent/dqn_starter_battle_*
+research_lvde/experiments/**/*.zip
