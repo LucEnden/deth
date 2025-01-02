@@ -25,30 +25,34 @@ all_starter_moves = np.array(list(starter_moves.values())).flatten()
 starter_move_df = moves_df[moves_df['identifier'].isin(all_starter_moves)]
 
 
-def get_starter(name: str):
+def get_starter(name: str, nature: Optional[str] = None) -> pb.Pokemon:
     if name not in starter_names:
         raise ValueError(f'{name} is not a valid starter name')
 
-    stats = get_stats_by_name(name)
+    # stats = get_stats_by_name(name)
 
-    return pb.Pokemon(
+    starter = pb.Pokemon(
         name_or_id=name,
         level=starter_lvl,
         moves=starter_moves[name],
         gender=get_random_gender_mf(),
         ability=starter_abilities[name],
-        nature=get_random_nature(),
-        cur_hp=stats[0],
-        stats_actual=stats
+        nature=get_random_nature() if nature is None else nature,
+        # cur_hp=stats[0],
+        # stats_actual=stats
+        ivs = [0, 0, 0, 0, 0, 0],
+        evs = [0, 0, 0, 0, 0, 0],
     )
+    starter.reset_stats()
+    return starter
 
 
-def get_random_starter():
+def get_random_starter(nature: Optional[str] = None):
     name = random.choice(starter_names)
-    return get_starter(name)
+    return get_starter(name, nature)
 
 
-def get_rival_starter(agent_starter_name: str):
+def get_rival_starter(agent_starter_name: str, nature: Optional[str] = None):
     name = ''
     if agent_starter_name == 'turtwig':
         name = 'chimchar'
@@ -57,5 +61,4 @@ def get_rival_starter(agent_starter_name: str):
     elif agent_starter_name == 'piplup':
         name = 'turtwig'
 
-    return get_starter(name)
-
+    return get_starter(name, nature)
