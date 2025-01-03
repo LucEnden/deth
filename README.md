@@ -1,4 +1,4 @@
-## Getting started
+## Getting started - DeSmuME
 
 1. Download the DeSmuME exe first and run it (see downloads section)
 2. Try to open a ROM, this creates the ROM folder
@@ -43,3 +43,11 @@
 - **Save state 1 (ROM_NAME.ds1):** a state in which the intro sequence (the introduction menu where prof. Rowan asks you a bunch of stuff + naming yourself and the rival) has been played trough, meaning it starts in the bedroom (before talking to the rival). The save state is intented for restarting a run. DO NOT OVERWRITE THIS STATE!
 - **Save state 9 (ROM_NAME.ds0):** a state in which the game is 100% completed. It has a party full of level 100 Pokemons (including one's for HM purposes), all items, all gyms etc. for manual testing. DO NOT OVERWRITE THIS STATE!
 - **All other states**: reserved for eventually running the code on the game.
+
+## Getting started - Pokemon Showdown
+
+```bash
+git clone https://github.com/smogon/pokemon-showdown.git
+cd pokemon-showdown
+node pokemon-showdown start --no-security
+```
