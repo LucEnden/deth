@@ -80,3 +80,9 @@ def get_type_decoding(type_id: int):
 def all_type_encodings():
     return np.array(type_encoder.transform(type_encoder.classes_))
 #endregion
+
+
+#region Stat methods
+def get_random_ivs():
+    return [ random.randint(0, 31) for _ in range(6) ]
+#endregion

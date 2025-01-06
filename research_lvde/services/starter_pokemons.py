@@ -25,6 +25,9 @@ all_starter_moves = np.array(list(starter_moves.values())).flatten()
 starter_move_df = moves_df[moves_df['identifier'].isin(all_starter_moves)]
 
 
+def get_random_starter_name():
+    return random.choice(starter_names)
+
 def get_starter(name: str, nature: Optional[str] = None) -> pb.Pokemon:
     if name not in starter_names:
         raise ValueError(f'{name} is not a valid starter name')
