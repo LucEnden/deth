@@ -9,3 +9,5 @@ research_lvde/experiments/**/*.zip
 emulation/pokemon-showdown/
 research_lvde/data/node_modules/
 research_lvde/data/raw_platinum_trainers.json
+research_lvde/data/gen4_dex.json
+**/package-lock.json
