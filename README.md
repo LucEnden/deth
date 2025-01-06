@@ -47,7 +47,7 @@
 ## Getting started - Pokemon Showdown
 
 ```bash
-git clone https://github.com/smogon/pokemon-showdown.git
-cd pokemon-showdown
+git clone https://github.com/smogon/pokemon-showdown.git emulation/pokemon-showdown
+cd emulation/pokemon-showdown
 node pokemon-showdown start --no-security
 ```
