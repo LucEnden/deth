@@ -47,6 +47,7 @@
 ## Getting started - Pokemon Showdown
 
 ```bash
+pip install poke-env
 git clone https://github.com/smogon/pokemon-showdown.git emulation/pokemon-showdown
 cd emulation/pokemon-showdown
 node pokemon-showdown start --no-security
