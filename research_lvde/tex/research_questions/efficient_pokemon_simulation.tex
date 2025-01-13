@@ -1,8 +1,17 @@
 \section{How can we efficiently simulate Pokémon Platinum?}
 \dots
 
-\subsection{What does "efficiency" entail in this context, particularly regarding time and computational complexity (and potentially space complexity)?}
-\dots
+\subsection{What does "efficiency" entail in this context, particularly regarding time complexity (and potentially space complexity)?}
+TODO: describe that time complexity is most important, as to make the training faster. to measure this we can imploy methods such as Big O to measure the complexity of each simulator.
+TODO: describe that space complexity is only important up to a certain point. the most limiting factor in this regard is my hadrware availability, as if I have enough hardware specs to house the space required for any simulator, it really becomes a non issue. But the space complexity does have to be analaysed for each simulation
+TODO: describe that these concepts also apply to any agent implementation, such as one that uses Q-Tables or a DQN model. For the approaches, space and time complexity will be taken into account during experimentation. 
 
 \subsection{What existing software products or tools are available for this purpose, and how can they be utilized or adapted?}
-\dots
+
+TODO: describe the C++ implementation used in the video that inspired this study. also highlight my lack of knowledge about C++ which might make this implementation not the best fit
+TODO: descirbe the poke-battle-sim package on pip which seems like a perfect fit given its speed in emulating the game, plus its implemented in python which I am more familiar with 
+TODO: describe the pokemon showdown implementation, which is most future proof as it implements all battle logic for all generations, it is also most maintained and showdown is regarded in the pokemon commuinty as THE authority on pokemon battle simulations
+
+\subsection{Conclusion}
+
+TODO: describe that all of the simulators mentioned above are valid candidates, each with their own pro's and con's. Also mention that they will be taken into account whilst experimenting. But most likley, given my own experties in python rather then C++, I will be opting for python based simulators

@@ -1,5 +1,7 @@
 \section{Pokémon Platinum Definition's}
 
+TODO replace all sets (\\mathbb\{text\}) with a more descriptive version (for example: $\text{item} \in \mathbb{Items}$ instead of $i \in \mathbb{I}$)
+
 The game itself, paired with online community driven sources, provide all the necesarry information to define pokémon's in a mathimatical fashion.
 
 \subsection{Types}
@@ -38,7 +40,7 @@ A singular \emph{move} $m$ is a 7-tuple $(\text{name}, \text{type}, \text{catego
     \item power $\in \mathbb{N}$ is the power of the move.
     \item accuracy $\in \mathbb{N}$ is the accuracy of the move.
     \item pp $\in \mathbb{N}$ is the power points of the move.
-    \item effect is the effect of the move as a string.
+    \item effect describes the change in state (if any) resulting from using move $m$ in state $s$.
 \end{itemize}
 
 \paragraph{}
@@ -51,21 +53,16 @@ The empty move $m \in \mathbb{M}$ is defined as $(\lambda, T_0, \lambda, 0, 0, 0
 
 \emph{Abilities} $\mathbb{A}$ is a set of all abilities. A list of all abilities can be found at [Psypokes](http://www.psypokes.com/dpphgss/abilities.php).
 
-TODO: Research if abilities are constant or if they can change during the game.  
-TODO: Research different types of abilities and define functions that can be used to determine if an ability is of a certain type.
+Any $a \in \mathbb{A}$ that, during any battle, either does or does not result in state changes.
 
 \subsection{Items}
 
 \emph{Items} $\mathbb{I}$ is a set of all items available in Pokémon Platinum. A list of all items can be found at [Serebii.net](https://www.serebii.net/platinum/items.shtml).
 
-An item $x \in \mathbb{I}$ is a 3-tuple $(name, function, type)$, where:
+An item $x \in \mathbb{I}$ is a 3-tuple $(name, effect)$, where:
 \begin{itemize}
     \item $name$ is the name of the item as a string.
-    \item $function$ is the function $f$ of item $x$ such that when used, $f$ either does or does not result in a state change.
-    \item $type$ is the type of the item.
-    \begin{itemize}
-        \item $type \in \{ \text{healing} \}$ dictates the change in state of item $x$.
-    \end{itemize}
+    \item $effect$ is the effect $e$ of item $x$ such that when used, $f$ either does or does not result in a state change.
 \end{itemize}
 
 \subsection{Bag}
@@ -74,12 +71,16 @@ The bag $\mathbb{B}$ is the set of items available to any given agent in state $
 
 \subsection{Status Effects}
 
-Status effects $\mathbb{E}$ is a 5-tuple $( \text{poisoned}, \text{burned}, \text{paralyzed}, \text{asleep}, \text{frozen} )$.
-TODO: Describe each effect in detail.
+Status effects $\mathbb{E}$ is a 6-tuple $( \text{poisoned}, \text{badly poisoned}, \text{burned}, \text{paralyzed}, \text{asleep}, \text{frozen} )$.
 
 \subsection{Nature}
 
 TODO: define pokemon natures mathimatically
+
+A nature $n \in \text{Natures}$ is a function on any Pokémon $p$ that results in a 10\% increase and decrease in 1 specific stat depending on the nature.
+
+The specific stat changes are predetirmined by a table, which can be found on 
+https://bulbapedia.bulbagarden.net/wiki/Nature#Stat-focused_table
 
 \subsection{Pokémon}
 
@@ -93,14 +94,20 @@ A \emph{Pokémon} $p \in \mathbb{P}$ is a ...-tuple $(
     \item $\mathbb{P}$ is the set of all Pokémon available in Pokémon Platinum. It is constant and known beforehand. A list of Pokémon can be found at [TODO: add link to the Pokémon Platinum Dex](lin).
     \item $hp, \text{atk}, \text{def}, \text{spatk}, \text{spdef}, \text{spd} \in \mathbb{N}$ are the Pokémon's stats, those being: hit points, physical attack power, physical defensive power, special attack power, special defensive power, and speed, respectively.
     \begin{itemize}
-        \item TODO: Describe that stats are all functions, such that:
+        \item Stats are all functions $f(x) \in \mathbb{N}$, such that:
             \begin{itemize}
                 \item $hp(p) = \left[ \frac{2 \times \text{base} + \text{iv} + (\frac{\text{ev}}{4}) \times \text{level}}{100} \right] + level + 10$
                 \item All other stats $f(p) = \left[ \left( \left[ \frac{2 \times \text{base } + \text{ iv} + (\frac{\text{ ev}}{4}) \times \text{level}}{100} \right] + 5 \right) \times \text{nature} \right]$
             \end{itemize}
     \end{itemize}
     \item $iv \in \mathbb{N}$ is the Pokémon's individual value.
+    \begin{itemize}
+        TODO: describe limits of IV (0 <= IV <= 31)
+    \end{itemize}
     \item $ev \in \mathbb{N}$ is the Pokémon's effort value, which are bonus stats that can be gained through battling.
+    \begin{itemize}
+        TODO: describe limits of EV (0 <= EV <= 252, sum(EV) <= 510)
+    \end{itemize}
     \item ability $x \in \mathbb{A}$.
     \item $t_1, t_2 \in T$ are the Pokémon's types.
     \begin{itemize}

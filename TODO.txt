@@ -1,5 +1,0 @@
-
-State space
-Action space
-Visualization wireframe
-Environment setup
