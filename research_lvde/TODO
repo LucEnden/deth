@@ -1,3 +1,0 @@
-- Create experiment notebooks for different learning approaches, as state space, action space etc. are probably be different per experiment
-    - Experiment with model free and model based learning approach
-    - Potentially, create multiple models (one for choosing items for example, depending on whether a generalized model is able to converge within time frame of the project)
