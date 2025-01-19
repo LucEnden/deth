@@ -1,1 +1,18 @@
-TODO: schrijf leeswijzer voor laatste aanlevering
+Voor hen geintreseerd in de code uitgewerkt tijdens de studie, alle code is terug te vinden via onderstaande link:
+    https://github.com/LucEnden/deth/tree/main/research_lvde/experiments
+
+Een compleet rapport, inclusief textuele samenvattingen van de experimenten is terug te vinden in de aanlevering:
+    rapport.pdf
+
+De hoofdstukken zijn hieronder uitgelegd:
+-  "About this study" en "The goal of this study"
+    Deze hoofdstukken zijn enkel een korte introductie in de naar de studie
+-  "Domain understanding"
+    Is een hoofdstuk wat introductie geeft aan de wereld van Pokemon en de relatie van pokemon tot de studie
+-  "Some definitions before continuing"
+    Heeft een aantal definities, sommige door andere opgezet (zoals de MDP) en de wiskundige definities van pokemon welke ik zelf heb gemaakt
+-  "Research Questions"
+    Dit zijn onderzoeks vragen waar ik mij over heb gebogen voorafgaand aan of tijdens mijn studie.
+    Deze zijn niet perse terug te vinden in mijn notebooks, de antwoorden hierop zijn verspreid over de notebooks achterhaald
+-  "Experiments"
+    Dit zijn textuele samenvatting van notebooks terug te vinden in: https://github.com/LucEnden/deth
