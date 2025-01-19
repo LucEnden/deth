@@ -1,0 +1,23 @@
+\section{Initial Pokemon Batteling Agent}
+
+The experiment aimed to create a minimalistic Pokémon battling agent as a foundational framework for future development. This initial implementation focuses on the game's first rival battle, chosen to keep the state space manageable while ensuring meaningful agent learning. (Refer to “Experiment Goal” and “About the state space”)
+
+\subsection{State Space and Approach}
+
+The state space was derived from the attributes of Pokémon involved in a single battle, informed by the inputs seen in the Pokémon Showdown calculator. Despite being limited to two Pokémon in battle, the state space is extensive due to detailed attributes such as base stats, IVs, and EVs. This complexity ruled out simpler methods like Q-Tables. Instead, a Deep Q-Learning (DQN) approach was adopted, with potential future enhancements using Double DQN to address overfitting. (Refer to “Sizing the state space” and “Choosing an approach for the sized state space”)
+
+\subsection{Observation and Action Spaces}
+
+The observation space included details about both parties (agent and NPC) and stat changes. A hierarchical action space was defined, starting with a simplified derived action space limited to move-based actions for the initial experiment. This abstraction allowed the agent to perform meaningful high-level actions rather than direct control inputs. (Refer to “Observation Space,” “From data to observation space,” and “Action Space”)
+
+\subsection{Reward Function}
+
+A straightforward reward function guided training: positive rewards for winning, penalties for losing, and small negative rewards for ongoing non-terminating states. This balanced approach incentivized learning without exploitation of the reward structure. (Refer to “Reward Function”)
+
+\subsection{Training Process and Results}
+
+The training involved iterative tuning of hyperparameters such as exploration fraction and total timesteps. Initial iterations with low exploration fractions (e.g., 0.1) and 10,000 timesteps yielded poor results with noisy performance. Adjustments to higher exploration fractions (up to 0.5) and increased timesteps (up to 1 million) resulted in notable improvements. The final iteration demonstrated a clear upward trend in the mean episode reward, albeit with residual volatility. (Refer to “Training summary”)
+
+\subsection{Conclusions}
+
+The DQN model successfully learned to navigate the starter battle, avoiding invalid moves and selecting effective strategies. Despite inherent limitations in the first rival battle—widely acknowledged within the Pokémon community as difficult to consistently win—the agent demonstrated competent decision-making. The environment proved robust and extensible, providing a solid base for further research and refinement. (Refer to “Conclusion”)

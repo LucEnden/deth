@@ -1,17 +1,43 @@
 \section{How can we efficiently simulate Pokémon Platinum?}
-\dots
+
+Simulating Pokémon Platinum efficiently is critical to ensure that reinforcement learning training can be completed in a reasonable timeframe without exceeding hardware limitations. This section discusses efficiency in the context of time and space complexity and explores existing tools suitable for this purpose.
 
 \subsection{What does "efficiency" entail in this context, particularly regarding time complexity (and potentially space complexity)?}
-TODO: describe that time complexity is most important, as to make the training faster. to measure this we can imploy methods such as Big O to measure the complexity of each simulator.
-TODO: describe that space complexity is only important up to a certain point. the most limiting factor in this regard is my hadrware availability, as if I have enough hardware specs to house the space required for any simulator, it really becomes a non issue. But the space complexity does have to be analaysed for each simulation
-TODO: describe that these concepts also apply to any agent implementation, such as one that uses Q-Tables or a DQN model. For the approaches, space and time complexity will be taken into account during experimentation. 
+
+Efficiency in this context primarily refers to the time and space complexity of the simulation:
+\begin{itemize}
+    \item Time Complexity: This is the most critical factor for efficiency, as faster simulations allow for shorter training times and more iterations. We can measure time complexity using methods such as Big O notation, evaluating the computational cost of each simulator and how it scales with the size of the simulation. Reducing time complexity directly contributes to faster model training and experimentation.
+    \item Space Complexity: While less critical than time complexity, space complexity remains relevant up to the limits of the hardware. If the system has sufficient memory and storage resources to handle the requirements of a given simulator, space complexity becomes less of a concern. However, an analysis of space complexity is still necessary to ensure compatibility with available hardware.
+\end{itemize}
+
+These efficiency considerations are not limited to the simulator but extend to any agent implementation, such as Q-Table-based approaches or Deep Q-Network (DQN) models. Both time and space complexity of these approaches will be evaluated during experimentation to ensure scalability and practicality.
 
 \subsection{What existing software products or tools are available for this purpose, and how can they be utilized or adapted?}
 
-TODO: describe the C++ implementation used in the video that inspired this study. also highlight my lack of knowledge about C++ which might make this implementation not the best fit
-TODO: descirbe the poke-battle-sim package on pip which seems like a perfect fit given its speed in emulating the game, plus its implemented in python which I am more familiar with 
-TODO: describe the pokemon showdown implementation, which is most future proof as it implements all battle logic for all generations, it is also most maintained and showdown is regarded in the pokemon commuinty as THE authority on pokemon battle simulations
+Several software products and tools are available for simulating Pokémon battles. Each has distinct advantages and trade-offs, summarized as follows:
+\begin{itemize}
+    \item C++ Implementation:
+    \begin{itemize}
+        \item This approach was showcased in the video that inspired this study, demonstrating the potential for a highly optimized simulator.
+        \item Pros: Likely to have excellent performance in terms of time complexity due to the efficiency of C++.
+        \item Cons: My limited knowledge of C++ makes it difficult to adapt and extend this implementation, potentially hindering development and experimentation.
+    \end{itemize}
+    \item poke-battle-sim Python Package:
+    \begin{itemize}
+        \item This Python-based package offers fast emulation of Pokémon battles.
+        \item Pros: It is implemented in Python, a language I am highly familiar with, which allows for easy customization and integration with the reinforcement learning pipeline. Additionally, its speed makes it a strong candidate for efficient simulations.
+        \item Cons: It may lack the comprehensive functionality or long-term support available in other options.
+    \end{itemize}
+    \item Pokémon Showdown Implementation:
+    \begin{itemize}
+        \item Pokémon Showdown is the most widely used battle simulator in the Pokémon community and serves as the definitive standard for competitive Pokémon battling.
+        \item Pros: Showdown supports all generations of Pokémon battles, making it highly future-proof. It is also well-maintained and reliable, with extensive documentation and support.
+        \item Cons: Its complexity and potential overhead may be unnecessary for a study focused specifically on Generation 4 battles.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Conclusion}
 
-TODO: describe that all of the simulators mentioned above are valid candidates, each with their own pro's and con's. Also mention that they will be taken into account whilst experimenting. But most likley, given my own experties in python rather then C++, I will be opting for python based simulators
+All the simulators discussed are valid candidates, each offering unique advantages and disadvantages. While the C++ implementation promises high performance, it is less practical for me due to my limited expertise in C++. Pokémon Showdown offers the most comprehensive and future-proof solution but may be overly complex for the specific needs of this study.
+
+Given my familiarity with Python, the poke-battle-sim package is the most likely choice for this study. Its speed, simplicity, and Python compatibility make it an efficient and accessible option, well-suited to the scope of this research. However, all options will be considered during the experimentation phase to ensure the chosen simulator meets the study's requirements.

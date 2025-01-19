@@ -1,7 +1,5 @@
 \section{Pokémon Platinum Definition's}
 
-TODO replace all sets (\\mathbb\{text\}) with a more descriptive version (for example: $\text{item} \in \mathbb{Items}$ instead of $i \in \mathbb{I}$)
-
 The game itself, paired with online community driven sources, provide all the necesarry information to define pokémon's in a mathimatical fashion.
 
 \subsection{Types}
@@ -35,11 +33,11 @@ The \emph{Types} $T$ is a constant 18-tuple containing the following strings:
 A singular \emph{move} $m$ is a 7-tuple $(\text{name}, \text{type}, \text{category}, \text{power}, \text{accuracy}, \text{pp}, \text{effect})$, where:
 \begin{itemize}
     \item name is the name of the move as a string.
-    \item type $\in T$ is the type of the move.
-    \item category $\in \{ \text{physical}, \text{special}, \text{status}, \lambda \}$ is the category of the move.
-    \item power $\in \mathbb{N}$ is the power of the move.
-    \item accuracy $\in \mathbb{N}$ is the accuracy of the move.
-    \item pp $\in \mathbb{N}$ is the power points of the move.
+    \item type $\in T$
+    \item category $\in \{ \text{physical}, \text{special}, \text{status}, \lambda \}$
+    \item power $\in \mathbb{N}$ 
+    \item accuracy $\in \mathbb{N}$ 
+    \item pp $\in \mathbb{N}$
     \item effect describes the change in state (if any) resulting from using move $m$ in state $s$.
 \end{itemize}
 
@@ -51,13 +49,13 @@ The empty move $m \in \mathbb{M}$ is defined as $(\lambda, T_0, \lambda, 0, 0, 0
 
 \subsection{Abilities}
 
-\emph{Abilities} $\mathbb{A}$ is a set of all abilities. A list of all abilities can be found at [Psypokes](http://www.psypokes.com/dpphgss/abilities.php).
+\emph{Abilities} $\mathbb{A}$ is a set of all abilities. A list of all abilities can be found at \href{http://www.psypokes.com/dpphgss/abilities.php}{Psypokes}.
 
 Any $a \in \mathbb{A}$ that, during any battle, either does or does not result in state changes.
 
 \subsection{Items}
 
-\emph{Items} $\mathbb{I}$ is a set of all items available in Pokémon Platinum. A list of all items can be found at [Serebii.net](https://www.serebii.net/platinum/items.shtml).
+\emph{Items} $\mathbb{I}$ is a set of all items available in Pokémon Platinum. A list of all items can be found at \href{https://www.serebii.net/platinum/items.shtml}{Serebii}.
 
 An item $x \in \mathbb{I}$ is a 3-tuple $(name, effect)$, where:
 \begin{itemize}
@@ -75,47 +73,42 @@ Status effects $\mathbb{E}$ is a 6-tuple $( \text{poisoned}, \text{badly poisone
 
 \subsection{Nature}
 
-TODO: define pokemon natures mathimatically
-
 A nature $n \in \text{Natures}$ is a function on any Pokémon $p$ that results in a 10\% increase and decrease in 1 specific stat depending on the nature.
 
-The specific stat changes are predetirmined by a table, which can be found on 
-https://bulbapedia.bulbagarden.net/wiki/Nature#Stat-focused_table
+The specific stat changes are predetirmined by a table, which can be found on \href{https://bulbapedia.bulbagarden.net/wiki/Nature#Stat-focused_table}{Bulbapedia}.
 
 \subsection{Pokémon}
 
-A \emph{Pokémon} $p \in \mathbb{P}$ is a ...-tuple $( 
+A \emph{Pokémon} $p \in \mathbb{P}$ is a 32-tuple $(
     \text{base hp}, \text{base atk}, \text{base def}, \text{base spatk}, \text{base spdef}, \text{base spd}, \break
-    \text{hp iv}, \text{atk iv}, \text{def iv}, \text{spatk iv}, \text{spdef iv}, \text{spd iv}, 
+    \text{hp iv}, \text{atk iv}, \text{def iv}, \text{spatk iv}, \text{spdef iv}, \text{spd iv}, \break
     \text{hp ev}, \text{atk ev}, \text{def ev}, \text{spatk ev}, \text{spdef ev}, \text{spd ev}, \break
-    \text{level}, \text{ability}, \text{nature}, t_1, t_2, m_1, m_2, m_3, m_4, \text{status}
-    )$, where:
+    \text{level}, \text{ability}, \text{nature}, t_1, t_2, m_1, m_2, m_3, m_4, \break
+    \text{status}, \text{held item}, \text{weight}, \text{friendship value}, \text{gender})$, where:
 \begin{itemize}
-    \item $\mathbb{P}$ is the set of all Pokémon available in Pokémon Platinum. It is constant and known beforehand. A list of Pokémon can be found at [TODO: add link to the Pokémon Platinum Dex](lin).
-    \item $hp, \text{atk}, \text{def}, \text{spatk}, \text{spdef}, \text{spd} \in \mathbb{N}$ are the Pokémon's stats, those being: hit points, physical attack power, physical defensive power, special attack power, special defensive power, and speed, respectively.
+    \item $\mathbb{P}$ is the set of all Pokémon available in Pokémon Platinum.
+    \item $hp, \text{atk}, \text{def}, \text{spatk}, \text{spdef}, \text{spd} \in \mathbb{N}$
+    \item Stats are all functions $f(x) \in \mathbb{N}$, such that:
     \begin{itemize}
-        \item Stats are all functions $f(x) \in \mathbb{N}$, such that:
-            \begin{itemize}
-                \item $hp(p) = \left[ \frac{2 \times \text{base} + \text{iv} + (\frac{\text{ev}}{4}) \times \text{level}}{100} \right] + level + 10$
-                \item All other stats $f(p) = \left[ \left( \left[ \frac{2 \times \text{base } + \text{ iv} + (\frac{\text{ ev}}{4}) \times \text{level}}{100} \right] + 5 \right) \times \text{nature} \right]$
-            \end{itemize}
+        \item $hp(p) = \left[ \frac{2 \times \text{base} + \text{iv} + (\frac{\text{ev}}{4}) \times \text{level}}{100} \right] + level + 10$
+        \item All other stats $f(p) = \left[ \left( \left[ \frac{2 \times \text{base } + \text{ iv} + (\frac{\text{ ev}}{4}) \times \text{level}}{100} \right] + 5 \right) \times \text{nature} \right]$
     \end{itemize}
-    \item $iv \in \mathbb{N}$ is the Pokémon's individual value.
+    \item $\text{iv}_i\in \mathbb{N}; 0 \leq \text{iv}_i \leq 31$
+    \item $\text{ev}_i \in \mathbb{N}; 0 \leq \text{ev}_i \leq 252 \land \sum_{i=1}^{6}ev_i \leq 510$
+    \item $\text{level}\in \mathbb{N}; 0 \leq \text{level} \leq 100$
+    \item ability $x \in \mathbb{\text{Abilities}}$.
+    \item nature $x \in \mathbb{\text{Natures}}$
+    \item $t_1, t_2 \in \mathbb{\text{Types}}$
     \begin{itemize}
-        TODO: describe limits of IV (0 <= IV <= 31)
+        \item $monotype$ is a function on $p$ such that $monotype(p_{t_2}) \iff p_{t_2} \equiv T_0$
+        \item $partialtype$ is a function on $p$ such that $partialtype(p) \iff p_{t_1} \equiv T_i \lor p_{t_2} \equiv T_i$.
     \end{itemize}
-    \item $ev \in \mathbb{N}$ is the Pokémon's effort value, which are bonus stats that can be gained through battling.
-    \begin{itemize}
-        TODO: describe limits of EV (0 <= EV <= 252, sum(EV) <= 510)
-    \end{itemize}
-    \item ability $x \in \mathbb{A}$.
-    \item $t_1, t_2 \in T$ are the Pokémon's types.
-    \begin{itemize}
-        \item $monotype$ is a function on $p$ that results in a boolean value. A Pokémon $p$ is considered to be monotype if $p_{t_2} = T_0$, and dual type otherwise.
-        \item $partialtype$ is a function on $p$ that results in a boolean value. A Pokémon $p$ is considered to be partialtype if $p_{t_1} = T_i \lor p_{t_2} = T_i$.
-    \end{itemize}
-    \item $m_1, m_2, m_3, m_4 \in \mathbb{M}$ are the Pokémon's moves.
-    \item $status \in \mathbb{E}$.
+    \item $m_1, m_2, m_3, m_4 \in \mathbb{\text{Moves}}$
+    \item status $x \in \mathbb{\text{Statuses}}$
+    \item held item $x \in \mathbb{\text{Holdable Items}}$
+    \item weight $x \in \mathbb{N}$
+    \item friendship value $x \in \mathbb{N}; 0 \leq x \leq 252$
+    \item gender $g \in \{ \text{male}, \text{female}, \text{genderless} \}$
 \end{itemize}
 
 \subsection{Pokémon Party}
@@ -134,9 +127,9 @@ The effectiveness of a move $m$ against a Pokémon $p$ is a function $E(m, p) \i
     \end{itemize}
 \end{itemize}
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{https://img.pokemondb.net/images/typechart-gen2345.png}
-%     \caption{A visual representation of the Generation 4 type chart as provided by [pokemondb.net](https://pokemondb.net/type/old).}
-%     \label{fig:typechart}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./imgs/typechart-gen2345.png}
+    \caption{A visual representation of the Generation 4 type chart as provided by \href{https://pokemondb.net/type/old}{PokemonDB}.}
+    \label{fig:typechart}
+\end{figure}

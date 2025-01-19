@@ -54,21 +54,23 @@ What each action does is described by the \gls{transition model}.
 An action cost function $c(s, a, s')$ assigns a cost to taking an action and if that action results in reaching $s'$, a \gls{reward function} $R(s, a, s')$ assigns a reward to taking an action and reaching $s'$.
 
 \newpage
-\subsection{Comparitive Analysis on Popular Reinforcement Learning Approaches}
+\subsection{Comparative Analysis on Popular Reinforcement Learning Approaches}
 
-TODO: give a short description of the following approaches:
-- Q-learning (\cite{rn2022aima}, page 841)
-- SARSA (\cite{rn2022aima}, page 853)
-- Deep Q-Network (\cite{rn2022aima}, page 867)
-- Proximal Policy Optimization (\cite{rn2022aima}, page 872)
-- Deep Deterministic Policy Gradient
-- Trust Region Policy Optimization
-- Soft Actor-Critic
+This section provides a brief description of several popular reinforcement learning approaches, their core principles, and how they differ in solving decision-making problems.
+\begin{itemize}
+    \item Q-learning (\cite{rn2022aima}, page 841): Q-learning is a model-free, off-policy RL algorithm used to learn the optimal action-value function, Q(s,a)Q(s,a), which estimates the cumulative reward for taking an action aa in a state ss and following the optimal policy thereafter. It updates Q-values iteratively using the Bellman equation and does not require a model of the environment.
+    \item SARSA (\cite{rn2022aima}, page 853): SARSA (State-Action-Reward-State-Action) is a model-free, on-policy RL algorithm. Unlike Q-learning, it updates the Q-value based on the action actually taken under the current policy. This makes it sensitive to the exploration strategy, as it learns the Q-values for the policy being followed.
+    \item Deep Q-Network (DQN) (\cite{rn2022aima}, page 867): DQN combines Q-learning with deep learning by using a neural network to approximate the Q-function. It incorporates techniques like experience replay and target networks to stabilize training and enable RL to scale to problems with high-dimensional state spaces.
+    \item Proximal Policy Optimization (PPO) (\cite{rn2022aima}, page 872): PPO is a policy-gradient-based algorithm that seeks to optimize a stochastic policy by using a clipped objective function to balance exploration and exploitation. It simplifies trust-region optimization, making it more computationally efficient while maintaining stable learning.
+    \item Deep Deterministic Policy Gradient (DDPG): DDPG is an actor-critic algorithm designed for continuous action spaces. It combines deterministic policy gradients with deep neural networks, enabling the agent to learn both a policy (actor) and a value function (critic). It leverages experience replay and target networks to improve stability.
+    \item Trust Region Policy Optimization (TRPO): TRPO is a policy optimization method that enforces a trust region constraint to ensure stable policy updates. It uses a surrogate loss function to improve the policy iteratively while limiting the magnitude of each update to maintain training stability.
+    \item Soft Actor-Critic (SAC): SAC is an off-policy, actor-critic algorithm that optimizes a stochastic policy while incorporating an entropy term in the objective function. The entropy term encourages exploration by maximizing the randomness of the policy, leading to more robust learning in complex environments.
+\end{itemize}
 
 \subsection{How do these approaches compare in terms of their strengths and weaknesses?  }
 
-TODO: add a table with the SWOT analysis.
+Unfortunately, due to time constraints, the SWOT analysis won't be included in this document.
 
 \subsection{Are there supporting methods, such as statistical techniques or others, that could enhance the effectiveness of reinforcement learning?}
 
-\dots
+Similair to the SWOT analysis, the discussion on supporting methods won't be included in this document due to time constraints.

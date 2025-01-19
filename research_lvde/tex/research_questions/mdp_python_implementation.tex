@@ -2,28 +2,23 @@
 
 In this chapter we will look at how \gls{mdp}'s can be implemented in python.
 
-\subsection{What are Markovian decision processes?}
+\subsection{What are Markovian decision processes and what is their relation towards reinforcement learning?}
 
-For a more formal definition, please see ... TODO: insert inner document href to formal definition
+For a more formal definition, please see the Markovian Decision Processes section in the Definitions chapter.
 
-TODO: describe in your own words what MDP's are, its relation towards reinforcement learning, using the book and slides to gather info
+Markov Decision Processes \gls{mdp}'s are mathematical frameworks used to model decision-making problems where outcomes are partly random and partly under the control of an agent. An MDP is defined by a set of states, a set of actions, a transition function describing the probability of moving between states given an action, and a reward function that assigns a numerical value to each state-action pair. The Markov property, which assumes that the future state depends only on the current state and action, is a key characteristic of MDPs.
+
+MDPs form the theoretical foundation of \gls{rl}. In \gls{rl}, the goal is to learn a policy—a mapping from states to actions—that maximizes the cumulative reward over time. The agent interacts with an environment modeled as an MDP, using observed rewards and transitions to improve its policy. Techniques in RL, such as Q-learning or policy gradient methods, leverage the structure of MDPs to solve complex decision-making problems efficiently.
 
 \subsection{What tools, libraries, or frameworks are available to assist in programming Markovian decision processes?}
 
-TODO: desribe the list bellow in a more 
+The list bellow functions as a growing list of tools, libraries, and frameworks that can be used to assist in programming Markovian decision processes in Python.
 
-- Fundementals like: numpy, pandas, matplotlib, seaborn, etc.
-    For data manipulation, visualization, etc.
-- https://keras.io/examples/rl/ with https://pytorch.org/
-    For custom deep reinforcement learning approaches. 
-    Given my previous experience with pytorch powered keras models the choice for using this combination of libraries is self evident to me.
-- https://stable-baselines3.readthedocs.io/en/master/
-    For pre-built reinforcement learning models. 
-    Given the fact that I am not yet familiar with the inner workings of reinforcement learning, using pre-built models is a good way to get started.
-    In future experiments, once I have a better understanding of the inner workings of reinforcement learning, I can start building my own models using the tools above.
-- https://gymnasium.farama.org/
-    Given its one of if not the most populair RL projects out there, it is a good starting point for me to get familiar with the concepts of RL.
-- https://pymdptoolbox.readthedocs.io/en/latest/
-    For when I want to tinker around using MDP's in Python
-- https://github.com/infer-actively/pymdp
-    For when I want to use Active Inference agents in Markov Decision Process environments
+\begin{itemize}
+    \item Fundementals for data manipulation, visualization, etc. like: numpy, pandas, matplotlib, seaborn, etc.
+    \item For custom deep reinforcement learning approaches like: \href{https://keras.io/examples/rl/}{keras} with \href{https://pytorch.org/}{pytorch}
+    \item For pre-built reinforcement learning models: \href{https://stable-baselines3.readthedocs.io/en/master/}{stable-baselines3}
+    \item Given its popularity: \href{https://gymnasium.farama.org/}{OpenAI Gym} is a no brainer
+    \item For when I want to tinker around using MDP's in Python: \href{https://pymdptoolbox.readthedocs.io/en/latest/}{pymdptoolbox}
+    \item For when Active Inference is a good fit for the problem: \href{https://github.com/infer-actively/pymdp}{pymdp}
+\end{itemize}

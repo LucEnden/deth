@@ -23,9 +23,13 @@ The actions are essentially all the I/O inputs on the device where pokemon plati
 
 \subsection{Derived Action Space}
 
-TODO: describe that a more meaningfull action space can be made from each of the fundemental action space at any state s. the more meaningfull action space includes 3 actions:
-- use move
-- switch pokemon
-- use item
+While the fundamental action space provides a comprehensive set of actions available to the agent at any given time, it can be overly granular and difficult to interpret in practice. To simplify decision-making and create a more meaningful action space, we derive a higher-level action space based on the context of the game state ss.
+
+The derived action space includes three primary actions:
+\begin{itemize}
+    \item Use Move: Select one of the currently available moves for the active Pokémon. This action encompasses the decision to execute an attack, applying strategy based on move type, power, and effectiveness against the opponent.
+    \item Switch Pokémon: Change the active Pokémon to one of the other Pokémon in the party. This action is strategic, allowing the agent to adapt to unfavorable matchups or conserve resources.
+    \item Use Item: Select an item from the bag to use during the battle. Items can have various effects, such as healing, buffing, or reviving Pokémon, adding another layer of decision-making to the derived action space.
+\end{itemize}
 
 Where each action $a(s) => \{ x; x \in A \}$
