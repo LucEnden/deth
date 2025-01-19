@@ -4,12 +4,11 @@
 \usepackage[hidelinks]{hyperref} % Uncomment this line to hide hyperlinks formatting
 \usepackage{hyperref}
 \usepackage{glossaries}
-\usepackage{biblatex}
-
-\makeglossaries
-\input{glossary.tex}
-
+\usepackage[backend=biber]{biblatex}
 \addbibresource{references.bib}
+
+\input{glossary.tex}
+\makeglossaries
 
 \begin{document}
 
@@ -29,8 +28,6 @@
 \tableofcontents
 
 % Main Content
-% ...
-
 \newpage
 \input{about_this_study.tex}
 
@@ -48,6 +45,9 @@
 
 \newpage
 \input{research_questions.tex}
+
+\newpage
+\input{experiments.tex}	
 
 \newpage
 \printglossaries

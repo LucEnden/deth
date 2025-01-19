@@ -5,8 +5,9 @@
             "name": "pdflatex",
             "tools": [
                 "pdflatex",
-                "bibtex",
+                "biber",
                 "pdflatex",
+                "pdflatex"
             ],
         }
     ],
@@ -24,9 +25,15 @@
             ]
         },
         {
-            "name": "bibtex",
+            "args": [],
             "command": "bibtex",
+            "name": "bibtex"
+        },
+        {
+            "name": "biber",
+            "command": "biber",
             "args": [
+                "--output-directory=out",
                 "%DOCFILE%"
             ]
         }

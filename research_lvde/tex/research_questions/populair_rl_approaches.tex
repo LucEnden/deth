@@ -16,7 +16,7 @@ In reinforcement learning, the \gls{agent} must balance \emph{exploration} and \
 
 \emph{Policy-based} approaches, in contrast, directly optimize the without explicitly estimating a value function. The \gls{agent} learns a parameterized \gls{policy} that maps states to actions, often using methods like gradient ascent to maximize expected rewards. This approach is particularly well-suited for environments with high-dimensional or continuous action spaces where deriving a \gls{policy} from a value function may be challenging.
 
-\subsection{On-\gls{policy} vs Off-\gls{policy} approaches}
+\subsection{On-policy vs Off-policy approaches}
 
 \emph{On-\gls{policy}} approaches learn a \gls{policy} while interacting with the environment using the same \gls{policy} that is being evaluated and improved. This means the \gls{agent} uses its current \gls{policy} to generate actions and then updates that \gls{policy} based on the resulting feedback. 
 
@@ -54,7 +54,7 @@ What each action does is described by the \gls{transition model}.
 An action cost function $c(s, a, s')$ assigns a cost to taking an action and if that action results in reaching $s'$, a \gls{reward function} $R(s, a, s')$ assigns a reward to taking an action and reaching $s'$.
 
 \newpage
-\subsection{Comparative Analysis on Popular Reinforcement Learning Approaches}
+\subsection{Comparative Analysis on Popular RL Approaches}
 
 This section provides a brief description of several popular reinforcement learning approaches, their core principles, and how they differ in solving decision-making problems.
 \begin{itemize}

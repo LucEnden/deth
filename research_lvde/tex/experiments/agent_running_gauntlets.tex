@@ -1,0 +1,23 @@
+\section{Agent Running Gauntlets}
+
+This experiment aimed to design an agent capable of learning to play in a Pokémon Showdown-powered environment. The training regimen was inspired by the Nuzlocke Challenge, a ruleset that emphasizes survival and strategic planning. By structuring the agent’s training within these constraints, the goal was to explore how well it could adapt to challenging, resource-limited scenarios.
+
+\subsection{Training Framework}
+The training was framed around a "gauntlet" concept, where the agent would battle a series of trainers in sequence without losing its entire team. Rewards were designed to encourage progress and strategy, with increasing benefits for completing more battles and penalties for failures like a full team wipe. To balance learning, the agent would first explore each opponent in the sequence extensively before facing them in the gauntlet.
+
+\subsection{Nuzlocke Challenge Rules}
+
+The Nuzlocke Challenge served as the foundation for the agent’s training. The agent would face constraints such as permanent loss of Pokémon upon fainting, limited opportunities to acquire new Pokémon, and level caps to prevent over-preparation. These rules added complexity to the agent's decision-making process, prioritizing efficiency and risk assessment. Core rules include:
+\begin{itemize}
+    \item Permanence of fainted Pokémon (considered "dead").
+    \item Restrictions on catching Pokémon, including species duplicates and legendary exclusions.
+    \item Punishments for team wipes (complete resets).
+    \item Level caps based on "boss trainers" (key opponents).
+    \item Limited item use in battles, except for held items.
+\end{itemize}
+
+\subsection{Planned Systems}
+Several systems were conceptualized to support the experiment. A class for trainers was intended to manage the data for opponents and the agent itself. Additional components included systems for generating wild Pokémon encounters and structuring locations as a graph, organizing encounters and battles in a fixed order.
+
+\subsection{Conclusion}
+Despite the detailed planning and conceptual framework, the experiment was not completed due to time constraints. Core aspects, such as reward shaping and the implementation of training mechanisms, were outlined but remain to be tested in practice. Future work could build on this foundation to fully explore the agent’s potential in such a constrained environment.

@@ -1,0 +1,30 @@
+\section{Monte Carla Tree Search on Starter Battle}
+
+This experiment investigates applying Monte Carlo Tree Search (MCTS) to the Starter Battle environment as a model-based alternative to the Deep Q-Network (DQN) model explored earlier. The primary objective was to understand how well MCTS performs compared to DQN and to evaluate the feasibility of implementing a transition model in this context.
+
+\subsection{Evolution of the Experiment}
+
+\emph{Objective and Motivation:}
+\indent The experiment aimed to explore MCTS as a model-based approach inspired by Google's AlphaGo, contrasting it with the model-free DQN approach. The focus was on creating a transition model to evaluate possible game states.
+
+\emph{Challenges in Representation:}
+\indent Key challenges included adapting MCTS for Pokémon battles, which differ from traditional perfect-information games like chess. Notably, the absence of a fixed root node and the dynamic nature of simultaneous moves complicated implementation.
+
+\emph{Simplified Damage Formula:}
+\indent The Pokémon damage calculation was simplified to streamline the transition model while accounting for essential factors like level, attack, defense, and move power.
+
+\emph{Implementation Hurdles:}
+\indent A critical oversight was identified regarding the simultaneous action nature of Pokémon battles, necessitating a reevaluation of the MCTS approach. Time constraints further hindered the complete implementation of a transition model.
+
+\subsection{Conclusions}
+
+Constructing a comprehensive transition model for Pokémon battles proved infeasible due to the game's complexity (e.g., 493 Pokémon, 215 move effects, items, varying battlefield states, and more). This contrasts with simpler games like chess, where rules and states are more manageable.
+
+Some notable knowledge gathered from this experiment with regards to \emph{Model-Based vs. Model-Free Approaches}:
+\begin{itemize}
+    \item Model-based approaches, like MCTS, are more explanatory and deterministic, requiring fewer iterations to converge due to their reliance on a transition model for state evaluation.
+    \item However, they demand significant effort and memory, especially in complex environments like Pokémon.
+    \item Model-free methods, such as DQN, are better suited for problems with pre-existing implementations or high complexity.
+\end{itemize}
+
+In summary, while MCTS offers theoretical advantages, the complexity of Pokémon battles and practical constraints led to the conclusion that a model-free approach remains more viable within the scope of this project.

@@ -1,0 +1,29 @@
+\section{Defining a Proper Observation Space}
+
+The experiment aimed to explore and define a complete observation space for Pokémon battles. Specifically, it sought to formalize the necessary elements that encompass trainer parties and battlefield states, ensuring comprehensive coverage of all possible in-game scenarios. (Refer to Experiment Goal)
+
+\section{Initial Concept: Informal Definition}
+
+The observation space was informally outlined to include:
+\begin{itemize}
+    \item Trainer Parties: Information about both the agent's and NPC's party.
+    \item Battlefield Effects: Persistent conditions such as weather, entry hazards, and screen effects.
+    \item Volatile Status Effects: Temporary changes affecting individual Pokémon, like stat buffs/debuffs, confusion, trapping moves, and more.
+    \item Detailed Structures:
+    \begin{itemize}
+        \item Party: Ordered list of 1–6 Pokémon.
+        \item Pokémon: Comprehensive tuple including level, stats, abilities, moves, statuses, and other battle-relevant traits.
+        \item Move: Tuple encompassing a move’s type, power, accuracy, priority, and targeting rules.
+    \end{itemize}
+\end{itemize}
+
+This informal framework outlined what should be tracked to model a battle effectively. (Refer to Informally Defined Observation Space for a detailed breakdown)
+
+\section{Evolution: Formal Definition}
+
+Using a data-driven approach, the initial informal structure was refined. An exhaustive search enabled the identification of precise ranges for various attributes, transforming the observation space into a rigorously defined structure. This allowed for representation as discrete or continuous spaces, depending on the requirements of the computational solution. (Refer to Formally Defined Observation Space)
+
+\section{Experiment Results}
+The experiment successfully identified the necessary components and structures for a complete observation space, laying the groundwork for implementing battle simulations or training systems based on this formalization.
+
+I will not be incorperating the results of this experiment into this document for brevity.
